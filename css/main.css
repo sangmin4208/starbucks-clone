@@ -1,3 +1,5 @@
-h1 {
+body {
   color: red;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 100px;
 }
