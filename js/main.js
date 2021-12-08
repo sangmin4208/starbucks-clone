@@ -13,3 +13,25 @@ searchInputEl.addEventListener("focusout", () => {
   searchEl.classList.remove("focused");
   searchInputEl.setAttribute("placeholder", "");
 });
+
+const bedgeEl = document.querySelector("header .badges")
+
+
+window.addEventListener('scroll',_.throttle(()=>{
+  if (window.scrollY > 500){
+    // 배지 숨기기
+    // gsap.to(요소, 옵션);
+    gsap.to(bedgeEl,{
+      opacity: 0,
+      duration: .6,
+      display:'none',
+    })
+  }else{
+    // 배지 보이기
+    gsap.to(bedgeEl,{
+      opacity: 1,
+      duration: .6,
+      display:'block',
+    })
+  }
+},300))
