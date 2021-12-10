@@ -6,7 +6,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
 
-  height: 300vh;
+  height: 600vh;
 }
 img {
   display: block;
@@ -509,14 +509,6 @@ header .badges .badge {
   flex-grow: 1;
 }
 
-/* YOUTUBE VIDEO */
-/*   <section class="youtube">
-    <div class="youtube__area">
-      <div id="player">
-
-      </div>
-    </div>
-  </section> */
 
 .youtube {
   position: relative;
@@ -526,7 +518,6 @@ header .badges .badge {
 }
 .youtube .youtube__area {
   width: 1920px;
-  background: orange;
   position: absolute;
   left: 50%;
   margin-left: calc(1920px / -2);
@@ -557,7 +548,6 @@ header .badges .badge {
 }
 .youtube .inner {
   height: 700px;
-  background-color: royalblue;
 }
 .youtube .floating1 {
   position: absolute;
@@ -569,7 +559,6 @@ header .badges .badge {
   top: 350px;
   left: 150px;
 }
-
 
 /* SEASON PRODUCT */
 .season-product .floating3 {
@@ -594,25 +583,49 @@ header .badges .badge {
 }
 
 /* RESERVE COFFEE */
-.reserve-coffee{
-background-image: url("../images/reserve_bg.jpg");
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
 }
 
-.reserve-coffee .inner{
-  height:400px;
+.reserve-coffee .inner {
+  height: 400px;
 }
-.reserve-coffee .reserve-logo{
+.reserve-coffee .reserve-logo {
   position: absolute;
-  top:110px;
-  left:0;
+  top: 110px;
+  left: 0;
 }
-.reserve-coffee .text-group{
+.reserve-coffee .text-group {
   position: absolute;
-  top:124px;
-  left:208px;
+  top: 124px;
+  left: 208px;
 }
-.reserve-coffee .product{
+.reserve-coffee .product {
   position: absolute;
-  right:0;
+  right: 0;
   top: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pick-your-favorite .inner {
+  padding:110px 0;
+}
+.pick-your-favorite .text-group {
+  margin-left: 100px;
+  display: flex;
+  width: 352px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap:40px;
+}
+.pick-your-favorite .text-group .title {
+}
+.pick-your-favorite .text-group .description {
 }
