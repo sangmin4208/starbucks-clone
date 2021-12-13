@@ -15,7 +15,7 @@ searchInputEl.addEventListener("focusout", () => {
 });
 
 const bedgeEl = document.querySelector("header .badges")
-
+const toTopEl = document.querySelector("#to-top");
 
 window.addEventListener('scroll',_.throttle(()=>{
   if (window.scrollY > 500){
@@ -26,6 +26,11 @@ window.addEventListener('scroll',_.throttle(()=>{
       duration: .6,
       display:'none',
     })
+    //버튼 보이기
+    gsap.to(toTopEl,{
+      duration:.2,
+      x: 0
+    })
   }else{
     // 배지 보이기
     gsap.to(bedgeEl,{
@@ -33,8 +38,20 @@ window.addEventListener('scroll',_.throttle(()=>{
       duration: .6,
       display:'block',
     })
+    //버튼 숨기기
+    gsap.to(toTopEl,{
+      duration:.2,
+      x: 100
+    })
   }
 },300))
+
+toTopEl.addEventListener("click",function(){
+  gsap.to(window, {
+    duration:.7,
+    scrollTo:0
+  })
+})
 
 
 const fadeEls = document.querySelectorAll('.fade-in')
