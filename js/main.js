@@ -72,6 +72,17 @@ new Swiper('.promotion .swiper-container', {
   }
 })
 
+new Swiper('.awards .swiper-container',{
+  autoplay:true,
+  loop:true,
+  spaceBetween:38,
+  slidesPerView:5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
+  }
+})
+
 
 const promotionEl = document.querySelector('.promotion');
 const promtionToggleBtn = document.querySelector('.toggle-promotion');
